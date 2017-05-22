@@ -24,7 +24,7 @@ class Placing
 			end
 		end
 
-		def demongoize placing_obj
+		def demongoize placing_obj			
 			case placing_obj
 			when nil then nil
 			when Hash then self.new(placing_obj[:name], placing_obj[:place])

@@ -24,5 +24,7 @@ module Triresults
     config.active_record.raise_in_transactional_callbacks = true
 
     Mongoid::load! './config/mongoid.yml'
+
+    config.eager_load_paths += %W( #{config.root}/app/services )
   end
 end
